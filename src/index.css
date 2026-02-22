@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    /* Pure Black */
+    --foreground: 0 0% 90%;
+    /* Brightened base text color */
+
+    /* Bright Neon Palette - Cyberpunk Aesthetic */
+    --primary: 190 100% 50%;
+    /* Electric Cyan */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 320 100% 50%;
+    /* Hot Magenta / Pink */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 280 100% 60%;
+    /* Bright Violet */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+    /* Sharper edges for a more modern/brutalist feel */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 190 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 320 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 280 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border cursor-none;
+    /* Hide default cursor */
+  }
+
+  body {
+    @apply bg-black text-gray-200 antialiased selection:bg-primary/40 selection:text-black;
+    font-family: 'Sora', sans-serif;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    * {
+      @apply cursor-auto;
+    }
+  }
+}
+
+/* Premium Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.01);
+  /* Barely there white */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Scrollbar - Neon Cyan */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0088aa;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* Bright Neon Hover Effects & Textures */
+.neon-border {
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.2), inset 0 0 8px rgba(0, 229, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.neon-border:hover,
+.group:hover .neon-border {
+  border-color: rgba(0, 229, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.8), inset 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.9), 0 0 24px rgba(0, 229, 255, 0.5);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+  border-color: rgba(0, 229, 255, 0.5);
+  transform: translateY(-4px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animated subtle solid AMOLED background */
+.mesh-bg {
+  background-color: #000000;
+}
