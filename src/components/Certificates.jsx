@@ -17,7 +17,7 @@ const certificates = [
         issuer: "NASSCOM",
     },
     {
-        name: "Certification",
+        name: "Introduction to Machine Learning",
         issuer: "NPTEL",
     }
 ];

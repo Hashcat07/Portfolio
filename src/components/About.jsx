@@ -36,7 +36,7 @@ const About = () => {
                             <div className="h-[1px] w-full bg-white/10 my-6"></div>
                             <div className="flex justify-between items-center text-xs font-mono uppercase tracking-widest text-gray-500">
                                 <span>Location</span>
-                                <span className="text-white font-bold">Remote</span>
+                                <span className="text-white font-bold">Remote (Flexible)</span>
                             </div>
                             <div className="h-[1px] w-full bg-white/10 mt-6"></div>
                         </div>
