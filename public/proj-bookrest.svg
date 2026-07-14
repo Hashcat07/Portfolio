@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'Space Mono', monospace">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c0b0d"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg1)"/>
+  <!-- chrome -->
+  <rect x="0" y="0" width="800" height="44" fill="#131215"/>
+  <circle cx="26" cy="22" r="6" fill="#c2303d"/>
+  <circle cx="46" cy="22" r="6" fill="#3a373c"/>
+  <circle cx="66" cy="22" r="6" fill="#3a373c"/>
+  <rect x="100" y="12" width="600" height="20" rx="10" fill="#1c1a1e"/>
+  <text x="120" y="26" font-size="11" fill="#6f6b74">api.bookrest.dev — HTTP client</text>
+
+  <!-- endpoints sidebar -->
+  <rect x="0" y="44" width="208" height="556" fill="#0a090b"/>
+  <text x="22" y="82" font-size="12" fill="#eef0f6" font-weight="700">book-rest-api</text>
+  <text x="22" y="102" font-size="9" fill="#6f6b74" letter-spacing="2">ENDPOINTS</text>
+
+  <rect x="14" y="118" width="180" height="30" rx="6" fill="#c2303d" opacity="0.14"/>
+  <rect x="14" y="118" width="3" height="30" fill="#c2303d"/>
+  <text x="26" y="137" font-size="10" fill="#c2303d">GET /api/books</text>
+  <text x="26" y="171" font-size="10" fill="#8b8791">GET /api/books/{id}</text>
+  <text x="26" y="201" font-size="10" fill="#8b8791">POST /api/books</text>
+  <text x="26" y="231" font-size="10" fill="#8b8791">PUT /api/books/{id}</text>
+  <text x="26" y="261" font-size="10" fill="#8b8791">DELETE /api/books/{id}</text>
+
+  <text x="22" y="308" font-size="9" fill="#6f6b74" letter-spacing="2">LAYERS</text>
+  <text x="26" y="332" font-size="10" fill="#8b8791">Controller</text>
+  <text x="26" y="356" font-size="10" fill="#8b8791">Service</text>
+  <text x="26" y="380" font-size="10" fill="#8b8791">Repository</text>
+
+  <!-- request bar -->
+  <rect x="232" y="68" width="544" height="38" rx="8" fill="#131215" stroke="#232126"/>
+  <rect x="244" y="76" width="46" height="22" rx="5" fill="#c2303d"/>
+  <text x="252" y="91" font-size="11" fill="#050506" font-weight="700">GET</text>
+  <text x="302" y="92" font-size="11" fill="#c9c6cf">/api/books?author=tolkien&amp;page=0&amp;size=5</text>
+
+  <!-- status row -->
+  <text x="232" y="136" font-size="11" fill="#c2303d" font-weight="700">200 OK</text>
+  <text x="298" y="136" font-size="11" fill="#6f6b74">41 ms · 1.2 KB · application/json</text>
+
+  <!-- response body -->
+  <rect x="232" y="152" width="544" height="396" rx="10" fill="#0a090b" stroke="#1c1a1e"/>
+  <g font-size="11.5">
+    <text x="252" y="184" fill="#8b8791">{</text>
+    <text x="268" y="208" fill="#c2303d">"content"</text><text x="338" y="208" fill="#8b8791">: [</text>
+    <text x="284" y="232" fill="#8b8791">{</text>
+    <text x="300" y="256" fill="#c2303d">"id"</text><text x="332" y="256" fill="#8b8791">:</text><text x="344" y="256" fill="#eef0f6">4,</text>
+    <text x="300" y="280" fill="#c2303d">"title"</text><text x="352" y="280" fill="#8b8791">:</text><text x="364" y="280" fill="#eef0f6">"The Hobbit",</text>
+    <text x="300" y="304" fill="#c2303d">"author"</text><text x="360" y="304" fill="#8b8791">:</text><text x="372" y="304" fill="#eef0f6">"J.R.R. Tolkien",</text>
+    <text x="300" y="328" fill="#c2303d">"price"</text><text x="352" y="328" fill="#8b8791">:</text><text x="364" y="328" fill="#eef0f6">14.99</text>
+    <text x="284" y="352" fill="#8b8791">},</text>
+    <text x="284" y="376" fill="#6f6b74">… 4 more</text>
+    <text x="268" y="400" fill="#8b8791">],</text>
+    <text x="268" y="424" fill="#c2303d">"page"</text><text x="316" y="424" fill="#8b8791">:</text><text x="328" y="424" fill="#eef0f6">0,</text>
+    <text x="268" y="448" fill="#c2303d">"totalElements"</text><text x="384" y="448" fill="#8b8791">:</text><text x="396" y="448" fill="#eef0f6">27</text>
+    <text x="252" y="472" fill="#8b8791">}</text>
+  </g>
+
+  <!-- footer chips -->
+  <g font-size="10">
+    <rect x="232" y="560" width="104" height="24" rx="12" fill="none" stroke="#2b282e"/>
+    <text x="248" y="576" fill="#8b8791">Spring Boot 3</text>
+    <rect x="348" y="560" width="60" height="24" rx="12" fill="none" stroke="#2b282e"/>
+    <text x="364" y="576" fill="#8b8791">JPA</text>
+    <rect x="420" y="560" width="76" height="24" rx="12" fill="none" stroke="#2b282e"/>
+    <text x="436" y="576" fill="#8b8791">MySQL</text>
+    <rect x="508" y="560" width="128" height="24" rx="12" fill="none" stroke="#7e1d27"/>
+    <text x="524" y="576" fill="#c2303d">JUnit · MockMvc</text>
+  </g>
+</svg>

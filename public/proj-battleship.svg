@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace, 'Space Mono', monospace">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c0b0d"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  <!-- chrome -->
+  <rect x="0" y="0" width="800" height="44" fill="#131215"/>
+  <circle cx="26" cy="22" r="6" fill="#c2303d"/>
+  <circle cx="46" cy="22" r="6" fill="#3a373c"/>
+  <circle cx="66" cy="22" r="6" fill="#3a373c"/>
+  <rect x="100" y="12" width="600" height="20" rx="10" fill="#1c1a1e"/>
+  <text x="120" y="26" font-size="11" fill="#6f6b74">hashcat07.github.io/battleship</text>
+
+  <text x="40" y="88" font-size="20" fill="#eef0f6" font-weight="700">BATTLESHIP</text>
+  <text x="168" y="88" font-size="11" fill="#c2303d">— TEST-DRIVEN</text>
+  <text x="40" y="108" font-size="10" fill="#6f6b74">ENEMY WATERS · YOUR TURN</text>
+
+  <!-- board: 10x10, 36px cells, origin (64,140) -->
+  <g font-size="9" fill="#6f6b74">
+    <text x="76" y="132">A</text><text x="112" y="132">B</text><text x="148" y="132">C</text><text x="184" y="132">D</text><text x="220" y="132">E</text>
+    <text x="256" y="132">F</text><text x="292" y="132">G</text><text x="328" y="132">H</text><text x="364" y="132">I</text><text x="400" y="132">J</text>
+    <text x="48" y="164">1</text><text x="48" y="200">2</text><text x="48" y="236">3</text><text x="48" y="272">4</text><text x="48" y="308">5</text>
+    <text x="48" y="344">6</text><text x="44" y="380">7</text><text x="44" y="416">8</text><text x="44" y="452">9</text><text x="40" y="488">10</text>
+  </g>
+  <!-- grid lines -->
+  <g stroke="#232126" stroke-width="1">
+    <path d="M64 140 h360 M64 176 h360 M64 212 h360 M64 248 h360 M64 284 h360 M64 320 h360 M64 356 h360 M64 392 h360 M64 428 h360 M64 464 h360 M64 500 h360"/>
+    <path d="M64 140 v360 M100 140 v360 M136 140 v360 M172 140 v360 M208 140 v360 M244 140 v360 M280 140 v360 M316 140 v360 M352 140 v360 M388 140 v360 M424 140 v360"/>
+  </g>
+
+  <!-- misses (paper dots) -->
+  <g fill="#3a373c">
+    <circle cx="118" cy="194" r="4"/>
+    <circle cx="298" cy="158" r="4"/>
+    <circle cx="226" cy="338" r="4"/>
+    <circle cx="370" cy="410" r="4"/>
+    <circle cx="154" cy="446" r="4"/>
+  </g>
+
+  <!-- sunk ship row (C5..F5) -->
+  <rect x="137" y="285" width="142" height="34" rx="6" fill="#c2303d" opacity="0.12"/>
+  <!-- hits (crimson X) -->
+  <g stroke="#c2303d" stroke-width="2.5" stroke-linecap="round">
+    <path d="M147 295 l16 16 M163 295 l-16 16"/>
+    <path d="M183 295 l16 16 M199 295 l-16 16"/>
+    <path d="M219 295 l16 16 M235 295 l-16 16"/>
+    <path d="M255 295 l16 16 M271 295 l-16 16"/>
+    <path d="M328 230 l16 16 M344 230 l-16 16"/>
+  </g>
+  <text x="64" y="530" font-size="10" fill="#c2303d">CRUISER SUNK — C5 · D5 · E5 · F5</text>
+
+  <!-- test runner panel -->
+  <rect x="456" y="128" width="304" height="404" rx="10" fill="#0a090b" stroke="#1c1a1e"/>
+  <text x="476" y="158" font-size="10" fill="#6f6b74" letter-spacing="2">JEST — WATCH MODE</text>
+  <g font-size="11">
+    <rect x="476" y="176" width="44" height="20" rx="4" fill="#c2303d"/>
+    <text x="484" y="190" fill="#050506" font-weight="700">PASS</text>
+    <text x="530" y="190" fill="#c9c6cf">src/ship.test.js</text>
+
+    <rect x="476" y="208" width="44" height="20" rx="4" fill="#c2303d"/>
+    <text x="484" y="222" fill="#050506" font-weight="700">PASS</text>
+    <text x="530" y="222" fill="#c9c6cf">src/gameboard.test.js</text>
+
+    <rect x="476" y="240" width="44" height="20" rx="4" fill="#c2303d"/>
+    <text x="484" y="254" fill="#050506" font-weight="700">PASS</text>
+    <text x="530" y="254" fill="#c9c6cf">src/player.test.js</text>
+  </g>
+  <g font-size="10.5" fill="#8b8791">
+    <text x="476" y="292">✓ places ships at coordinates</text>
+    <text x="476" y="314">✓ registers hit / miss</text>
+    <text x="476" y="336">✓ tracks sunk ships</text>
+    <text x="476" y="358">✓ detects win condition</text>
+    <text x="476" y="380">✓ rejects overlapping placement</text>
+  </g>
+  <g font-size="11">
+    <text x="476" y="424" fill="#6f6b74">Test Suites:</text><text x="566" y="424" fill="#eef0f6">3 passed, 3 total</text>
+    <text x="476" y="446" fill="#6f6b74">Tests:</text><text x="566" y="446" fill="#c2303d" font-weight="700">24 passed</text><text x="656" y="446" fill="#eef0f6">, 24 total</text>
+    <text x="476" y="468" fill="#6f6b74">Time:</text><text x="566" y="468" fill="#eef0f6">1.84 s</text>
+  </g>
+  <text x="476" y="508" font-size="10" fill="#6f6b74">webpack 5 · eslint · prettier</text>
+</svg>
