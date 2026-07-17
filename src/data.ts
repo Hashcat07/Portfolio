@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
 
 export const STATS: Stat[] = [
   { value: 8.24, label: 'CGPA / 10', decimals: 2 },
-  { value: 2027, label: 'Expected Grad', decimals: 0 },
+  { value: 2027, label: 'Expected Year of Grad', decimals: 0 },
   { value: 10, label: 'Live Web Apps', decimals: 0, pad: 2, suffix: '+' },
   { value: 35, label: 'GitHub Repos', decimals: 0, pad: 2, suffix: '+' },
 ];

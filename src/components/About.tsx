@@ -7,7 +7,7 @@ export default function About() {
       <Reveal variant="up" className="font-mono text-[12px] tracking-[0.2em] text-accent mb-9">01 — ABOUT</Reveal>
 
       <h2 className="max-w-[1100px] m-0 font-display font-semibold leading-[1.08] tracking-[-0.02em]" style={{ fontSize: 'clamp(28px,4.2vw,62px)' }}>
-        <SplitText text="A final-year CS engineer at Anna University building" />{' '}
+        <SplitText text="A final-year CS engineer at Panimalar Engineering College" />{' '}
         <span className="font-serif italic text-accent">full-stack, test-driven</span>{' '}
         <SplitText text="web apps — Spring Boot & JPA on the backend," />{' '}
         <span className="font-serif italic text-accent">React.js</span>{' '}
